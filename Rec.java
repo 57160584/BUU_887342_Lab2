@@ -6,8 +6,14 @@ public class Rec {
 		numDigits(1356) = 4.
 		Precondition: n >= 0. */
     public static int numDigits(int n) {
+    	
+    	if ((n<10) && (n>-10)) return 1;
+    	return 1 + numDigits(n/10);
+    	
+    	//String s =  Integer.toString(n);
+    	 
+    	// return s.length();
 	
-	// fill me in
 	
     }
 
@@ -33,8 +39,9 @@ public class Rec {
 	
     /** = a copy of s with characters in reverse order.
 		Example: reverse("abcdefg") = "gfedcba". */
-	public static String reverse(String s) {
-	
+	public static String reuerse(String s) {
+	if (s.length()) == 0) return "";
+	return reuerse(s.substring(1)) + String.copyValueOf(s.charAt(0));
 	// fill me in
 	
 	}
