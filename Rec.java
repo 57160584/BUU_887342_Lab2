@@ -25,8 +25,10 @@ public class Rec {
 		Example: removeChar("abeabe", 'e') = "abab". */
 	public static String removeChar(String s, char to_remove_char) {
 	
-	// fill me in
-	
+		if(s.length() == 0) return "";
+		if(s.charAt(0) == to_remove_char) return removeChar(s.substring(1),to_remove_char);
+		else return String.valueOf(s.charAt(0)) + removeChar(s.substring(1),to_remove_char);
+		
 	}
 	
     /** = a copy of s with characters in reverse order.
