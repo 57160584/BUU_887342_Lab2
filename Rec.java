@@ -6,8 +6,14 @@ public class Rec {
 		numDigits(1356) = 4.
 		Precondition: n >= 0. */
     public static int numDigits(int n) {
+    	
+    	if ((n<10) && (n>-10)) return 1;
+    	return 1 + numDigits(n/10);
+    	
+    	//String s =  Integer.toString(n);
+    	 
+    	// return s.length();
 	
-	// fill me in
 	
     }
 
