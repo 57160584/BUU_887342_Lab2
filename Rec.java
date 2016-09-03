@@ -7,9 +7,15 @@ public class Rec {
 	 */
 	public static int numDigits(int n) {
 
-		// fill me in
-
-	}
+    	if ((n<10) && (n>-10)) return 1;
+    	return 1 + numDigits(n/10);
+    	
+    	//String s =  Integer.toString(n);
+    	 
+    	// return s.length();
+	
+	
+    }
 
 	/**
 	 * = sum of the digits in the decimal representation of n. e.g. sumDigits(0)
@@ -28,18 +34,19 @@ public class Rec {
 	 */
 	public static String removeChar(String s, char to_remove_char) {
 
-		// fill me in
-
+		if(s.length() == 0) return "";
+		if(s.charAt(0) == to_remove_char) return removeChar(s.substring(1),to_remove_char);
+		else return String.valueOf(s.charAt(0)) + removeChar(s.substring(1),to_remove_char);
+		
 	}
-
-	/**
-	 * = a copy of s with characters in reverse order. Example:
-	 * reverse("abcdefg") = "gfedcba".
-	 */
+	
+    /** = a copy of s with characters in reverse order.
+		Example: reverse("abcdefg") = "gfedcba". */
 	public static String reverse(String s) {
-
-		// fill me in
-
+	if (s.length()) == 0) return "";
+	return reverse(s.substring(1)) + String.copyValueOf(s.charAt(0));
+	// fill me in
+	
 	}
 
 	public static void main(String[] args) {
